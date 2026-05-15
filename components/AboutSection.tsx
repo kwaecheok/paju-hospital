@@ -64,11 +64,11 @@ export default function AboutSection() {
             <span className="badge">ABOUT US</span>
             <h2 id="about-title" className="text-3xl md:text-4xl font-black text-gray-800 leading-tight mb-5">
               척추·관절 전문<br />
-              <span className="text-primary">파주쾌척한방병원</span>입니다
+              <span className="text-primary">쾌척한방병원</span>입니다
             </h2>
             {/* TODO: 실제 병원 소개 문구로 교체 */}
             <p className="text-gray-600 leading-relaxed mb-4">
-              파주쾌척한방병원은 2000년대 초부터 경기 파주 지역에서 척추·관절 전문 한방병원으로
+              쾌척한방병원은 2000년대 초부터 경기 파주 지역에서 척추·관절 전문 한방병원으로
               지역민의 건강을 책임져 왔습니다. 오랜 임상경험과 지속적인 연구를 통해 검증된
               한방 치료법으로 수많은 환자분들이 통증에서 회복하셨습니다.
             </p>

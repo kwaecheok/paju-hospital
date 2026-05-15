@@ -10,7 +10,7 @@ const SLIDES = [
     /* TODO: 실제 병원 메인 이미지로 교체 — public/images/hero/slide1.jpg */
     bgClass: 'bg-gradient-to-br from-[#0a2e26] via-[#1B5E52] to-[#0f3d35]',
     badge: '척추·관절 전문',
-    title: ['파주쾌척한방병원과', '함께 건강을 되찾으세요'],
+    title: ['쾌척한방병원과', '함께 건강을 되찾으세요'],
     subtitle: '20년 이상의 임상경험과 체계적인 한방 진료로\n허리·목·관절 통증의 근본 원인을 치료합니다.',
     cta1: { label: '진료 예약하기', href: '/community/consult' },
     cta2: { label: '치료분야 보기', href: '/treatment' },

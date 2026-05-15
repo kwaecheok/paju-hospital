@@ -39,7 +39,7 @@
 import Image from 'next/image'
 <Image
   src="/images/hero/slide1.jpg"
-  alt="파주쾌척한방병원 메인"
+  alt="쾌척한방병원 메인"
   fill
   className="object-cover"
   priority

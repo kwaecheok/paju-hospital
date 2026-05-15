@@ -1,6 +1,6 @@
-# 파주쾌척한방병원 홈페이지
+# 쾌척한방병원 홈페이지
 
-Next.js 14 + Tailwind CSS로 제작된 파주쾌척한방병원 공식 홈페이지입니다.
+Next.js 14 + Tailwind CSS로 제작된 쾌척한방병원 공식 홈페이지입니다.
 
 ---
 
@@ -92,7 +92,7 @@ paju-hospital/
 
 ```typescript
 export const PAJU_HOSPITAL: HospitalConfig = {
-  name: '파주쾌척한방병원',
+  name: '쾌척한방병원',
   phone: '031-939-5737',          // ← 전화번호
   address: '경기 파주시 해올2길 12', // ← 주소
   // ...

@@ -1,12 +1,12 @@
 'use strict';
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   파주쾌척한방병원 공통 컴포넌트 JS
+   쾌척한방병원 공통 컴포넌트 JS
    모든 페이지에서 로드 — 헤더/푸터/유틸리티
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
 /* ── 병원 정보 ───────────────────────────────── */
 const HOSPITAL = {
-  name:      '파주쾌척한방병원',
+  name:      '쾌척한방병원',
   phone:     '031-939-5737',
   phoneRaw:  '03193950737',
   address:   '경기 파주시 해올2길 12',
@@ -125,7 +125,7 @@ function buildHeader(currentPage) {
           <div class="logo-icon">쾌</div>
           <div style="line-height:1.2">
             <span class="logo-sub">ORIENTAL MEDICINE HOSPITAL</span>
-            <span class="logo-name">파주쾌척한방병원</span>
+            <span class="logo-name">쾌척한방병원</span>
           </div>
         </a>
         <nav class="hd-nav">${navHTML}</nav>
@@ -150,7 +150,7 @@ function buildHeader(currentPage) {
   <div class="mob-overlay" id="mob-overlay" onclick="closeMobile()"></div>
   <div class="mob-panel" id="mob-panel">
     <div class="mob-panel-hd">
-      <span>파주쾌척한방병원</span>
+      <span>쾌척한방병원</span>
       <button onclick="closeMobile()" style="width:24px;height:24px">${IC.close}</button>
     </div>
     <a href="tel:${HOSPITAL.phoneRaw}" class="mob-phone-row">
@@ -195,7 +195,7 @@ function buildFooter() {
               <div class="footer-logo-icon">쾌</div>
               <div>
                 <div class="footer-logo-sub">ORIENTAL MEDICINE HOSPITAL</div>
-                <div class="footer-logo-name">파주쾌척한방병원</div>
+                <div class="footer-logo-name">쾌척한방병원</div>
               </div>
             </div>
             <address class="footer-address">
@@ -220,7 +220,7 @@ function buildFooter() {
     </div>
     <div class="footer-copy">
       <div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem">
-        <span>Copyright © ${year} 파주쾌척한방병원. All rights reserved.</span>
+        <span>Copyright © ${year} 쾌척한방병원. All rights reserved.</span>
         <div style="display:flex;gap:1rem">
           <a href="#">개인정보처리방침</a>
           <a href="#">이용약관</a>

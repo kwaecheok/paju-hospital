@@ -58,7 +58,7 @@ export default function LocationSection() {
                 width="100%"
                 height="400"
                 frameBorder="0"
-                title="파주쾌척한방병원 위치"
+                title="쾌척한방병원 위치"
               />
             */}
             <div className="w-full aspect-video bg-gradient-to-br from-gray-200 to-gray-300 rounded-sm

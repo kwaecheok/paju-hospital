@@ -27,9 +27,9 @@ export interface HospitalConfig {
   keywords: string[]
 }
 
-/** ─── 파주쾌척한방병원 ─────────────────────────────────── */
+/** ─── 쾌척한방병원 ─────────────────────────────────── */
 export const PAJU_HOSPITAL: HospitalConfig = {
-  name: '파주쾌척한방병원',
+  name: '쾌척한방병원',
   shortName: '파주쾌척',
   phone: '031-939-5737',
   address: '경기 파주시 해올2길 12',
@@ -42,7 +42,7 @@ export const PAJU_HOSPITAL: HospitalConfig = {
   /* TODO: 실제 네이버 지도 embed URL로 교체하세요 */
   naverMapUrl: 'https://map.naver.com/v5/search/%ED%8C%8C%EC%A3%BC%EC%BE%8C%EC%B2%99%ED%95%9C%EB%B0%A9%EB%B3%91%EC%9B%90',
   description:
-    '파주쾌척한방병원은 척추·관절 전문 한방병원으로, 체계적인 진료와 따뜻한 마음으로 환자 여러분의 건강을 책임집니다.',
+    '쾌척한방병원은 척추·관절 전문 한방병원으로, 체계적인 진료와 따뜻한 마음으로 환자 여러분의 건강을 책임집니다.',
   keywords: [
     '파주한방병원', '파주척추전문', '파주쾌척', '허리디스크', '목디스크', '척추관협착증',
     '무릎관절', '교통사고한방치료', '추나요법 파주', '침치료 파주',
@@ -225,7 +225,7 @@ export const DOCTORS = [
 
 export const NOTICES = [
   { id: 1, title: '2025년 설 연휴 진료시간 안내', date: '2025.01.15', isNew: true },
-  { id: 2, title: '파주쾌척한방병원 진료 안내 변경 공지', date: '2025.01.10', isNew: false },
+  { id: 2, title: '쾌척한방병원 진료 안내 변경 공지', date: '2025.01.10', isNew: false },
   { id: 3, title: '건강보험 적용 추나요법 안내', date: '2024.12.20', isNew: false },
   { id: 4, title: '겨울철 척추 건강 관리 방법 안내', date: '2024.12.05', isNew: false },
   { id: 5, title: '병원 주차 안내', date: '2024.11.20', isNew: false },
