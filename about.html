@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>병원소개 | 파주쾌척한방병원</title>
+  <meta name="description" content="파주쾌척한방병원의 진료 철학, 특징, 시설을 소개합니다. 척추·관절 전문 한방병원으로 체계적이고 신뢰할 수 있는 치료를 제공합니다."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <style>
+    .philosophy-grid { display:grid;gap:2rem;grid-template-columns:1fr; }
+    @media(min-width:1024px){ .philosophy-grid { grid-template-columns:1fr 1fr;align-items:center; } }
+
+    .service-grid { display:grid;gap:1.5rem;grid-template-columns:1fr; }
+    @media(min-width:640px){ .service-grid { grid-template-columns:repeat(2,1fr); } }
+    @media(min-width:1024px){ .service-grid { grid-template-columns:repeat(4,1fr); } }
+    .service-card { background:#fff;border:1px solid var(--border);padding:2rem 1.5rem;text-align:center;transition:border-color .3s,box-shadow .3s; }
+    .service-card:hover { border-color:var(--primary);box-shadow:0 4px 20px rgba(0,0,0,.08); }
+    .service-icon { font-size:2.5rem;margin-bottom:1rem; }
+    .service-card h3 { font-size:1rem;font-weight:700;color:var(--text);margin:0 0 .75rem; }
+    .service-card p  { font-size:.8125rem;color:var(--text-muted);line-height:1.7;margin:0; }
+    .service-card ul { list-style:none;padding:0;margin:.75rem 0 0;text-align:left; }
+    .service-card ul li { font-size:.8125rem;color:var(--text-muted);padding:.2rem 0;display:flex;align-items:center;gap:.375rem; }
+    .service-card ul li::before { content:'·';color:var(--accent);font-weight:700; }
+
+    .feature-strip { display:grid;gap:1px;background:var(--border);grid-template-columns:1fr; }
+    @media(min-width:768px){ .feature-strip { grid-template-columns:repeat(2,1fr); } }
+    @media(min-width:1024px){ .feature-strip { grid-template-columns:repeat(4,1fr); } }
+    .feature-strip-item { background:#fff;padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:flex-start;gap:.75rem; }
+    .feature-strip-num { font-size:2rem;font-weight:900;color:var(--primary-muted);line-height:1;font-family:Georgia,serif; }
+    .feature-strip-item h3 { font-size:1rem;font-weight:700;color:var(--text);margin:0; }
+    .feature-strip-item p  { font-size:.8125rem;color:var(--text-muted);line-height:1.7;margin:0; }
+
+    .facility-grid { display:grid;gap:1rem;grid-template-columns:repeat(2,1fr); }
+    @media(min-width:768px){ .facility-grid { grid-template-columns:repeat(3,1fr); } }
+    .facility-ph { aspect-ratio:4/3;background:linear-gradient(135deg,var(--primary-muted),#c8e8e0);display:flex;flex-direction:column;align-items:center;justify-content:center;color:rgba(27,94,82,.35);font-size:.75rem;gap:.5rem; }
+    .facility-ph svg { width:32px;height:32px; }
+  </style>
+</head>
+<body data-page="about">
+<div id="header-root"></div>
+
+<!-- 서브 히어로 -->
+<div id="sub-hero-root"
+  data-title="병원소개"
+  data-subtitle="파주쾌척한방병원의 진료 철학과 특징을 소개합니다."
+  data-breadcrumbs='[["쾌척소개","about.html"],["병원소개","about.html"]]'>
+</div>
+
+<main>
+  <!-- ══════════════════════════════
+       진료 철학
+  ══════════════════════════════ -->
+  <section class="section-pad" style="background:#fff">
+    <div class="container">
+      <div class="philosophy-grid">
+        <!-- 이미지 -->
+        <div style="position:relative">
+          <!-- TODO: 실제 병원 대표 이미지 — public/images/about/hospital-main.jpg -->
+          <div style="aspect-ratio:4/3;background:linear-gradient(135deg,var(--primary-muted),#c8e8e0);display:flex;flex-direction:column;align-items:center;justify-content:center;color:rgba(27,94,82,.4)">
+            <svg style="width:64px;height:64px;margin-bottom:.75rem" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path stroke-linecap="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            <p style="font-size:.875rem;font-weight:500">병원 대표 사진 교체 예정</p>
+          </div>
+          <div style="position:absolute;bottom:-16px;right:-16px;background:var(--primary);color:#fff;padding:1.25rem 1.5rem;display:none" class="badge-box">
+            <p style="font-size:.75rem;color:rgba(255,255,255,.7);margin:0 0 .25rem">설립 이후</p>
+            <p style="font-size:1.5rem;font-weight:900;margin:0">20년+</p>
+            <p style="font-size:.75rem;color:rgba(255,255,255,.7);margin:.25rem 0 0">척추·관절 전문</p>
+          </div>
+        </div>
+        <!-- 텍스트 -->
+        <div>
+          <span class="section-badge">ABOUT US</span>
+          <h2 style="font-size:clamp(1.5rem,3.5vw,2rem);font-weight:900;line-height:1.3;margin:.25rem 0 1.25rem">
+            통증의 근본을 치료하는<br><span class="text-primary">파주쾌척한방병원</span>
+          </h2>
+          <p style="color:var(--text-muted);line-height:1.85;margin-bottom:1rem;font-size:.9375rem">
+            파주쾌척한방병원은 척추·관절 질환 치료에 특화된 한방병원으로, 오랜 임상경험을 바탕으로 지역민의 건강을 돌보고 있습니다. 단순한 증상 완화에 그치지 않고, 질환의 근본 원인을 파악하여 재발을 예방하는 치료를 지향합니다.
+          </p>
+          <p style="color:var(--text-muted);line-height:1.85;margin-bottom:1.5rem;font-size:.9375rem">
+            침치료, 한약치료, 추나요법, 약침치료 등 다양한 한방 치료법을 환자의 상태에 맞게 선택·조합하여 최적의 치료 방향을 제시합니다. 모든 진료는 담당 한의사가 직접 상담하고 치료합니다.
+          </p>
+          <blockquote style="border-left:3px solid var(--primary);padding:.75rem 1.25rem;background:var(--primary-muted);margin:0 0 1.5rem;border-radius:0 4px 4px 0">
+            <p style="font-size:.9375rem;font-weight:600;color:var(--primary);margin:0;line-height:1.6">"환자 한 분 한 분의 이야기에 귀 기울이고,<br>가장 적합한 치료를 찾아드리겠습니다."</p>
+          </blockquote>
+          <a href="tel:03193950737" class="btn-primary">📞 031-939-5737 상담 예약</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       병원 특징
+  ══════════════════════════════ -->
+  <section class="section-pad" style="background:var(--bg-light)">
+    <div class="container">
+      <div class="section-title">
+        <span class="section-badge">FEATURES</span>
+        <h2>파주쾌척한방병원의 특징</h2>
+        <p>환자 중심의 치료 철학으로 신뢰받는 한방병원이 되겠습니다</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="feature-strip" style="border:1px solid var(--border);overflow:hidden">
+        <div class="feature-strip-item">
+          <div class="feature-strip-num">01</div>
+          <h3>정확한 진단</h3>
+          <p>증상과 병력을 세밀하게 파악하고 체계적인 진찰을 통해 통증의 원인을 정확하게 진단합니다.</p>
+        </div>
+        <div class="feature-strip-item">
+          <div class="feature-strip-num">02</div>
+          <h3>맞춤형 치료</h3>
+          <p>환자 개인의 체질, 연령, 직업, 생활환경을 고려한 1:1 맞춤 치료 계획을 수립합니다.</p>
+        </div>
+        <div class="feature-strip-item">
+          <div class="feature-strip-num">03</div>
+          <h3>비수술 원칙</h3>
+          <p>한방 치료의 장점을 살려 가급적 수술 없이 자연치유력을 높이는 방향으로 치료합니다.</p>
+        </div>
+        <div class="feature-strip-item">
+          <div class="feature-strip-num">04</div>
+          <h3>지속적 사후 관리</h3>
+          <p>치료 종료 후에도 생활습관 교정, 운동 지도 등 재발 방지를 위한 관리를 안내합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       진료 서비스
+  ══════════════════════════════ -->
+  <section class="section-pad" style="background:#fff">
+    <div class="container">
+      <div class="section-title">
+        <span class="section-badge">SERVICES</span>
+        <h2>진료 서비스</h2>
+        <p>환자의 상태와 필요에 맞는 다양한 진료 서비스를 제공합니다</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-icon">🏥</div>
+          <h3>외래 치료</h3>
+          <p>통원하면서 받는 기본 한방 치료로 일상생활을 유지하며 꾸준한 치료가 가능합니다.</p>
+          <ul>
+            <li>침치료</li>
+            <li>추나요법</li>
+            <li>약침·봉침치료</li>
+            <li>한방 물리치료</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛏️</div>
+          <h3>입원 치료</h3>
+          <p>중증 척추·관절 환자 또는 집중 치료가 필요한 경우 입원하여 체계적인 치료를 받습니다.</p>
+          <ul>
+            <li>집중 한방치료</li>
+            <li>한약 복용 관리</li>
+            <li>영양 관리</li>
+            <li>재활 운동 지도</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚗</div>
+          <h3>교통사고 치료</h3>
+          <p>자동차보험이 적용되는 교통사고 후유증 전문 치료로 빠른 회복을 지원합니다.</p>
+          <ul>
+            <li>자동차보험 적용</li>
+            <li>목·허리 통증 치료</li>
+            <li>두통·어지럼 치료</li>
+            <li>근육 긴장 완화</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌿</div>
+          <h3>한방 재활</h3>
+          <p>수술 후 또는 만성 통증 환자를 위한 단계적 한방 재활 치료 프로그램입니다.</p>
+          <ul>
+            <li>수술 후 회복 지원</li>
+            <li>만성통증 관리</li>
+            <li>기능 회복 훈련</li>
+            <li>생활 지도 상담</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       시설 안내
+  ══════════════════════════════ -->
+  <section class="section-pad" style="background:var(--bg-light)">
+    <div class="container">
+      <div class="section-title">
+        <span class="section-badge">FACILITIES</span>
+        <h2>시설 안내</h2>
+        <p>쾌적하고 안전한 환경에서 치료받으실 수 있도록 시설을 갖추고 있습니다</p>
+        <div class="section-divider"></div>
+      </div>
+      <!-- TODO: 아래 각 div를 실제 시설 사진으로 교체 — public/images/facilities/ -->
+      <div class="facility-grid">
+        <div>
+          <div class="facility-ph">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16"/><path stroke-linecap="round" d="M3 21h18"/></svg>
+            <span>진료실 (사진 교체)</span>
+          </div>
+          <p style="font-size:.8125rem;color:var(--text-muted);text-align:center;padding:.75rem 0;margin:0">진료실</p>
+        </div>
+        <div>
+          <div class="facility-ph">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            <span>치료실 (사진 교체)</span>
+          </div>
+          <p style="font-size:.8125rem;color:var(--text-muted);text-align:center;padding:.75rem 0;margin:0">치료실</p>
+        </div>
+        <div>
+          <div class="facility-ph">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
+            <span>입원실 (사진 교체)</span>
+          </div>
+          <p style="font-size:.8125rem;color:var(--text-muted);text-align:center;padding:.75rem 0;margin:0">입원실</p>
+        </div>
+        <div>
+          <div class="facility-ph">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>한방 재활실 (사진 교체)</span>
+          </div>
+          <p style="font-size:.8125rem;color:var(--text-muted);text-align:center;padding:.75rem 0;margin:0">한방 재활실</p>
+        </div>
+        <div>
+          <div class="facility-ph">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/></svg>
+            <span>접수·대기실 (사진 교체)</span>
+          </div>
+          <p style="font-size:.8125rem;color:var(--text-muted);text-align:center;padding:.75rem 0;margin:0">접수·대기실</p>
+        </div>
+        <div>
+          <div class="facility-ph">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            <span>주차장 (사진 교체)</span>
+          </div>
+          <p style="font-size:.8125rem;color:var(--text-muted);text-align:center;padding:.75rem 0;margin:0">주차장</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       CTA
+  ══════════════════════════════ -->
+  <section class="cta-section">
+    <div class="container" style="position:relative;z-index:1;text-align:center;color:#fff">
+      <h2 style="font-size:clamp(1.5rem,4vw,2rem);font-weight:900;margin:0 0 1rem">궁금한 점이 있으신가요?</h2>
+      <p style="color:rgba(255,255,255,.8);margin-bottom:2rem;line-height:1.7">전화로 편하게 문의하시면 친절하게 안내해 드립니다.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center">
+        <a href="tel:03193950737" class="btn-accent" style="font-size:1rem;padding:1rem 2rem">📞 031-939-5737</a>
+        <a href="doctors.html" class="btn-outline-w">의료진 소개 보기</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer-root"></div>
+<a href="tel:03193950737" class="float-call" aria-label="전화">
+  <svg style="width:24px;height:24px" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+</a>
+<script src="assets/js/components.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded',function(){
+    const bb = document.querySelector('.badge-box');
+    function check(){ if(bb) bb.style.display = window.innerWidth>=768?'block':'none'; }
+    check(); window.addEventListener('resize',check,{passive:true});
+  });
+</script>
+</body>
+</html>

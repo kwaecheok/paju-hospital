@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>의료진현황 | 파주쾌척한방병원</title>
+  <meta name="description" content="파주쾌척한방병원 의료진을 소개합니다. 풍부한 임상경험을 가진 전문 한의사가 환자 여러분을 진료합니다."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <style>
+    .doctors-grid { display:grid;gap:2rem;grid-template-columns:1fr; }
+    @media(min-width:640px){ .doctors-grid { grid-template-columns:repeat(2,1fr); } }
+    @media(min-width:1024px){ .doctors-grid { grid-template-columns:repeat(3,1fr); } }
+
+    /* 큰 의료진 카드 (세로형) */
+    .doctor-card-lg { background:#fff;border:1px solid var(--border);overflow:hidden;transition:box-shadow .3s; }
+    .doctor-card-lg:hover { box-shadow:0 8px 32px rgba(0,0,0,.1); }
+    .doctor-photo-lg { position:relative;aspect-ratio:3/4;background:linear-gradient(180deg,var(--primary-muted),#c8e8e0);display:flex;flex-direction:column;align-items:center;justify-content:center; }
+    .doctor-photo-ph { color:rgba(27,94,82,.3); }
+    .doctor-overlay-lg { position:absolute;inset:0;background:rgba(27,94,82,.88);display:flex;flex-direction:column;justify-content:center;padding:1.5rem;opacity:0;transition:opacity .3s; }
+    .doctor-card-lg:hover .doctor-overlay-lg { opacity:1; }
+    .cred-title { font-size:.6875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6);margin:0 0 .625rem; }
+    .cred-list { list-style:none;padding:0;margin:0; }
+    .cred-list li { font-size:.8125rem;color:#fff;padding:.3rem 0;display:flex;align-items:flex-start;gap:.5rem;border-bottom:1px solid rgba(255,255,255,.1); }
+    .cred-list li:last-child { border-bottom:none; }
+    .cred-list li::before { content:'✓';color:var(--accent);flex-shrink:0;margin-top:1px; }
+
+    .doctor-info-lg { padding:1.5rem;border-top:3px solid var(--primary); }
+    .tag-specialty { display:inline-block;background:var(--primary-muted);color:var(--primary);font-size:.6875rem;font-weight:700;padding:.25rem .625rem;margin-bottom:.5rem; }
+    .doctor-name-lg { font-size:1.375rem;font-weight:900;color:var(--text);margin:0 0 .25rem; }
+    .doctor-title-lg { font-size:.875rem;font-weight:600;color:var(--primary);margin:0 0 1rem; }
+    .doctor-treat { display:flex;flex-wrap:wrap;gap:.375rem; }
+    .treat-tag { font-size:.6875rem;background:var(--bg-light);color:var(--text-muted);padding:.2rem .625rem;border:1px solid var(--border); }
+
+    /* 철학 섹션 */
+    .philosophy-item { display:flex;gap:1.25rem;padding:1.5rem;background:#fff;border:1px solid var(--border);align-items:flex-start; }
+    .philosophy-num { font-size:2rem;font-weight:900;color:var(--primary-muted);font-family:Georgia,serif;line-height:1;flex-shrink:0;width:48px; }
+    .philosophy-item h3 { font-size:1rem;font-weight:700;color:var(--text);margin:0 0 .375rem; }
+    .philosophy-item p  { font-size:.8125rem;color:var(--text-muted);line-height:1.7;margin:0; }
+    .philosophy-grid { display:grid;gap:1rem;grid-template-columns:1fr; }
+    @media(min-width:768px){ .philosophy-grid { grid-template-columns:repeat(2,1fr); } }
+  </style>
+</head>
+<body data-page="about">
+<div id="header-root"></div>
+
+<div id="sub-hero-root"
+  data-title="의료진현황"
+  data-subtitle="환자분의 상태를 세심하게 살피는 파주쾌척한방병원의 의료진을 소개합니다."
+  data-breadcrumbs='[["쾌척소개","about.html"],["의료진현황","doctors.html"]]'>
+</div>
+
+<main>
+  <!-- ══════════════════════════════
+       의료진 카드 목록
+  ══════════════════════════════ -->
+  <section class="section-pad" style="background:#fff">
+    <div class="container">
+      <div class="section-title">
+        <span class="section-badge">MEDICAL STAFF</span>
+        <h2>전문 의료진</h2>
+        <p>풍부한 임상경험과 지속적인 연구로 최선의 치료를 제공합니다</p>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="doctors-grid">
+        <!-- 의료진 1 -->
+        <!-- TODO: 실제 프로필 사진 — public/images/doctors/doctor1.jpg -->
+        <div class="doctor-card-lg">
+          <div class="doctor-photo-lg">
+            <svg class="doctor-photo-ph" style="width:80px;height:80px" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            <p style="margin-top:.75rem;font-size:.75rem;color:rgba(27,94,82,.45)">프로필 사진 교체 예정</p>
+            <div class="doctor-overlay-lg">
+              <p class="cred-title">주요 약력</p>
+              <ul class="cred-list">
+                <li>○○대학교 한의과대학 졸업</li>
+                <li>한의학 박사 학위 취득</li>
+                <li>대한한방내과학회 정회원</li>
+                <li>대한침구의학회 정회원</li>
+                <li>척추질환 전문 연수 수료</li>
+              </ul>
+            </div>
+          </div>
+          <div class="doctor-info-lg">
+            <span class="tag-specialty">척추·관절 전문</span>
+            <p class="doctor-name-lg">○○○ 원장 <!-- TODO: 실제 이름 입력 --></p>
+            <p class="doctor-title-lg">한의학 박사 · 대표원장</p>
+            <div class="doctor-treat">
+              <span class="treat-tag">허리디스크</span>
+              <span class="treat-tag">목디스크</span>
+              <span class="treat-tag">척추관협착증</span>
+              <span class="treat-tag">퇴행성관절염</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 의료진 2 -->
+        <!-- TODO: 실제 프로필 사진 — public/images/doctors/doctor2.jpg -->
+        <div class="doctor-card-lg">
+          <div class="doctor-photo-lg">
+            <svg class="doctor-photo-ph" style="width:80px;height:80px" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            <p style="margin-top:.75rem;font-size:.75rem;color:rgba(27,94,82,.45)">프로필 사진 교체 예정</p>
+            <div class="doctor-overlay-lg">
+              <p class="cred-title">주요 약력</p>
+              <ul class="cred-list">
+                <li>○○대학교 한의과대학 졸업</li>
+                <li>한의학 석사 학위 취득</li>
+                <li>대한침구의학회 정회원</li>
+                <li>추나요법 전문 연수 수료</li>
+                <li>봉침치료 연수 수료</li>
+              </ul>
+            </div>
+          </div>
+          <div class="doctor-info-lg">
+            <span class="tag-specialty">침구·추나 전문</span>
+            <p class="doctor-name-lg">○○○ 원장 <!-- TODO: 실제 이름 입력 --></p>
+            <p class="doctor-title-lg">한의학 석사 · 부원장</p>
+            <div class="doctor-treat">
+              <span class="treat-tag">침치료</span>
+              <span class="treat-tag">추나요법</span>
+              <span class="treat-tag">봉침치료</span>
+              <span class="treat-tag">어깨질환</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 의료진 3 -->
+        <!-- TODO: 실제 프로필 사진 — public/images/doctors/doctor3.jpg -->
+        <div class="doctor-card-lg">
+          <div class="doctor-photo-lg">
+            <svg class="doctor-photo-ph" style="width:80px;height:80px" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            <p style="margin-top:.75rem;font-size:.75rem;color:rgba(27,94,82,.45)">프로필 사진 교체 예정</p>
+            <div class="doctor-overlay-lg">
+              <p class="cred-title">주요 약력</p>
+              <ul class="cred-list">
+                <li>○○대학교 한의과대학 졸업</li>
+                <li>통증의학 전문 연수 수료</li>
+                <li>대한한방재활의학회 정회원</li>
+                <li>교통사고 후유증 치료 전문</li>
+                <li>안면마비 치료 연수 수료</li>
+              </ul>
+            </div>
+          </div>
+          <div class="doctor-info-lg">
+            <span class="tag-specialty">통증·재활 전문</span>
+            <p class="doctor-name-lg">○○○ 원장 <!-- TODO: 실제 이름 입력 --></p>
+            <p class="doctor-title-lg">한의사</p>
+            <div class="doctor-treat">
+              <span class="treat-tag">교통사고</span>
+              <span class="treat-tag">안면마비</span>
+              <span class="treat-tag">만성통증</span>
+              <span class="treat-tag">한방재활</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p style="text-align:center;font-size:.8125rem;color:var(--text-muted);margin-top:2rem">
+        ※ 카드에 마우스를 올리면 의료진 상세 약력을 확인하실 수 있습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       진료 철학
+  ══════════════════════════════ -->
+  <section class="section-pad" style="background:var(--bg-light)">
+    <div class="container">
+      <div class="section-title">
+        <span class="section-badge">PHILOSOPHY</span>
+        <h2>의료진 진료 철학</h2>
+        <p>환자를 중심에 두는 진료 원칙을 지켜나갑니다</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="philosophy-grid">
+        <div class="philosophy-item">
+          <div class="philosophy-num">01</div>
+          <div>
+            <h3>경청하는 진료</h3>
+            <p>환자분의 증상과 불편함을 충분히 들은 뒤 진단합니다. 바쁜 진료 환경에서도 한 분 한 분의 이야기에 귀 기울입니다.</p>
+          </div>
+        </div>
+        <div class="philosophy-item">
+          <div class="philosophy-num">02</div>
+          <div>
+            <h3>근거 있는 치료</h3>
+            <p>전통 한방 이론과 현대 의학적 연구를 함께 고려하여 효과가 검증된 치료 방법을 선택합니다.</p>
+          </div>
+        </div>
+        <div class="philosophy-item">
+          <div class="philosophy-num">03</div>
+          <div>
+            <h3>정직한 설명</h3>
+            <p>치료 방향과 예상 경과를 솔직하게 안내합니다. 과도한 기대를 심어주지 않고, 현실적인 목표를 함께 설정합니다.</p>
+          </div>
+        </div>
+        <div class="philosophy-item">
+          <div class="philosophy-num">04</div>
+          <div>
+            <h3>지속적인 학습</h3>
+            <p>의료 기술의 발전에 발맞춰 꾸준히 연수하고 공부합니다. 최신 한방 치료법을 연구하여 환자에게 적용합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       CTA
+  ══════════════════════════════ -->
+  <section class="cta-section">
+    <div class="container" style="position:relative;z-index:1;text-align:center;color:#fff">
+      <h2 style="font-size:clamp(1.5rem,4vw,2rem);font-weight:900;margin:0 0 1rem">진료 예약·문의</h2>
+      <p style="color:rgba(255,255,255,.8);margin-bottom:2rem;line-height:1.7">전문 의료진과의 상담을 원하시면 아래로 연락주세요.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center">
+        <a href="tel:03193950737" class="btn-accent" style="font-size:1rem;padding:1rem 2rem">📞 031-939-5737</a>
+        <a href="location.html" class="btn-outline-w">오시는 길 확인</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer-root"></div>
+<a href="tel:03193950737" class="float-call" aria-label="전화">
+  <svg style="width:24px;height:24px" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+</a>
+<script src="assets/js/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>오시는 길 | 파주쾌척한방병원</title>
+  <meta name="description" content="파주쾌척한방병원 오시는 길. 경기 파주시 해올2길 12. 전화 031-939-5737. 진료시간 평일 09:00~18:00."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <style>
+    .location-grid { display:grid;gap:2rem;grid-template-columns:1fr; }
+    @media(min-width:1024px){ .location-grid { grid-template-columns:3fr 2fr; } }
+
+    .map-area { width:100%;aspect-ratio:16/9;min-height:300px;background:linear-gradient(135deg,#e0e8e0,#c8d4c8);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#888; }
+    @media(min-width:1024px){ .map-area { aspect-ratio:auto;min-height:480px; } }
+
+    .hours-table { width:100%;border-collapse:collapse;font-size:.875rem; }
+    .hours-table tr { border-bottom:1px solid var(--border); }
+    .hours-table tr:last-child { border-bottom:none; }
+    .hours-table th { text-align:left;padding:.6rem 0;color:var(--text-muted);font-weight:600;width:90px;font-size:.8125rem; }
+    .hours-table td { padding:.6rem 0;font-weight:600;color:var(--text); }
+    .hours-table .closed { color:var(--text-muted);font-weight:400; }
+
+    .transport-item { display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border); }
+    .transport-item:last-child { border-bottom:none; }
+    .transport-icon { width:36px;height:36px;border-radius:9999px;background:var(--primary-muted);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0; }
+    .transport-item h3 { font-size:.875rem;font-weight:700;color:var(--text);margin:0 0 .25rem; }
+    .transport-item p  { font-size:.8125rem;color:var(--text-muted);line-height:1.65;margin:0; }
+
+    /* 모바일 전화 버튼 */
+    .mobile-call-banner { display:block;background:var(--primary);color:#fff;text-align:center;padding:1rem;font-size:1rem;font-weight:700;letter-spacing:.02em;position:sticky;top:64px;z-index:40; }
+    @media(min-width:768px){ .mobile-call-banner { display:none; } }
+  </style>
+</head>
+<body data-page="location">
+<div id="header-root"></div>
+
+<!-- 모바일 전화 배너 -->
+<a href="tel:03193950737" class="mobile-call-banner">
+  📞 031-939-5737 &nbsp;·&nbsp; 탭하여 전화 연결
+</a>
+
+<div id="sub-hero-root"
+  data-title="오시는 길"
+  data-subtitle="경기 파주시 해올2길 12 · 031-939-5737"
+  data-breadcrumbs='[["쾌척소개","about.html"],["오시는 길","location.html"]]'>
+</div>
+
+<main>
+  <!-- ══════════════════════════════
+       지도 + 정보
+  ══════════════════════════════ -->
+  <section class="section-pad" style="background:#fff">
+    <div class="container">
+      <div class="location-grid">
+
+        <!-- 지도 -->
+        <div>
+          <!--
+            TODO: 아래 div를 실제 지도로 교체하세요.
+            네이버 지도 예시:
+            <iframe
+              src="https://map.naver.com/v5/embed?type=place&..."
+              width="100%" height="480" frameborder="0"
+              title="파주쾌척한방병원 위치" style="border:0">
+            </iframe>
+
+            카카오 지도 예시:
+            <div id="kakao-map" style="width:100%;height:480px"></div>
+            <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KEY"></script>
+          -->
+          <div class="map-area">
+            <svg style="width:48px;height:48px;margin-bottom:1rem" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path stroke-linecap="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+            <p style="font-size:.875rem;font-weight:600;margin-bottom:.75rem">지도 영역 (교체 예정)</p>
+            <p style="font-size:.75rem;margin-bottom:1.25rem;text-align:center;line-height:1.6">아래 버튼으로 네이버 지도를 확인하세요</p>
+            <div style="display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center">
+              <a href="https://map.naver.com/v5/search/%ED%8C%8C%EC%A3%BC%EC%BE%8C%EC%B2%99%ED%95%9C%EB%B0%A9%EB%B3%91%EC%9B%90"
+                 target="_blank" rel="noopener noreferrer"
+                 style="background:#03C75A;color:#fff;padding:.625rem 1.25rem;font-size:.8125rem;font-weight:700;display:inline-flex;align-items:center;gap:.375rem">
+                🗺 네이버 지도
+              </a>
+              <a href="https://map.kakao.com/?q=%ED%8C%8C%EC%A3%BC%EC%BE%8C%EC%B2%99%ED%95%9C%EB%B0%A9%EB%B3%91%EC%9B%90"
+                 target="_blank" rel="noopener noreferrer"
+                 style="background:#FEE500;color:#000;padding:.625rem 1.25rem;font-size:.8125rem;font-weight:700;display:inline-flex;align-items:center;gap:.375rem">
+                🗺 카카오 지도
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 정보 -->
+        <div style="display:flex;flex-direction:column;gap:1.25rem">
+
+          <!-- 병원 정보 -->
+          <div class="info-card">
+            <h3>병원 정보</h3>
+            <dl>
+              <div class="info-row">
+                <dt>병 원 명</dt>
+                <dd style="font-weight:700">파주쾌척한방병원</dd>
+              </div>
+              <div class="info-row">
+                <dt>주   소</dt>
+                <dd>경기 파주시 해올2길 12</dd>
+              </div>
+              <div class="info-row">
+                <dt>전   화</dt>
+                <dd>
+                  <a href="tel:03193950737" style="color:var(--primary);font-weight:700;font-size:1.1rem">031-939-5737</a>
+                </dd>
+              </div>
+            </dl>
+            <!-- 모바일 전화 버튼 -->
+            <a href="tel:03193950737" class="btn-primary" style="width:100%;justify-content:center;margin-top:1rem;gap:.5rem">
+              <svg style="width:18px;height:18px" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+              031-939-5737 전화 연결
+            </a>
+          </div>
+
+          <!-- 진료시간 -->
+          <div class="info-card">
+            <h3>진료시간</h3>
+            <table class="hours-table">
+              <tbody>
+                <tr>
+                  <th scope="row">평   일</th>
+                  <td>오전 09:00 ~ 오후 18:00</td>
+                </tr>
+                <tr>
+                  <th scope="row">토요일</th>
+                  <td>오전 09:00 ~ 오후 13:00</td>
+                </tr>
+                <tr>
+                  <th scope="row">점심시간</th>
+                  <td>오후 13:00 ~ 14:00</td>
+                </tr>
+                <tr>
+                  <th scope="row">일요일</th>
+                  <td class="closed">휴진</td>
+                </tr>
+                <tr>
+                  <th scope="row">공휴일</th>
+                  <td class="closed">휴진</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="font-size:.75rem;color:var(--text-muted);margin-top:1rem;padding-top:.75rem;border-top:1px solid var(--border)">
+              ※ 진료시간은 사정에 따라 변경될 수 있으니 방문 전 전화 확인 바랍니다.
+            </p>
+          </div>
+
+          <!-- 주차 안내 -->
+          <div class="info-card">
+            <h3>주차 안내</h3>
+            <!-- TODO: 실제 주차 안내로 교체 -->
+            <p style="font-size:.875rem;color:var(--text-muted);line-height:1.7;margin:0">
+              병원 건물 내·외부 주차 가능합니다.<br>
+              자세한 주차 안내는 전화로 문의해 주세요.<br>
+              <span style="color:var(--text-muted);font-size:.8125rem">(주차 공간 수 등 실제 정보로 교체 필요)</span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       교통편 안내
+  ══════════════════════════════ -->
+  <section class="section-pad-sm" style="background:var(--bg-light)">
+    <div class="container">
+      <div class="section-title" style="margin-bottom:2rem">
+        <span class="section-badge">DIRECTIONS</span>
+        <h2>교통편 안내</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div style="max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--border);padding:1.5rem 2rem">
+        <!-- TODO: 실제 교통편 정보로 교체 -->
+        <div class="transport-item">
+          <div class="transport-icon">🚌</div>
+          <div>
+            <h3>버스</h3>
+            <p>파주 방면 ○○정류장 하차 후 도보 이동<br>
+            노선: ○○번, ○○번 (실제 노선 정보로 교체 필요)</p>
+          </div>
+        </div>
+        <div class="transport-item">
+          <div class="transport-icon">🚇</div>
+          <div>
+            <h3>지하철·전철</h3>
+            <p>경의중앙선 ○○역 하차 후 버스 또는 택시 이용<br>
+            (실제 역명 및 소요 시간으로 교체 필요)</p>
+          </div>
+        </div>
+        <div class="transport-item">
+          <div class="transport-icon">🚗</div>
+          <div>
+            <h3>자가용</h3>
+            <p>내비게이션에 "파주쾌척한방병원" 또는<br>
+            "경기 파주시 해올2길 12" 입력</p>
+          </div>
+        </div>
+        <div class="transport-item">
+          <div class="transport-icon">🅿️</div>
+          <div>
+            <h3>주차</h3>
+            <p>병원 건물 내·외부 주차 가능<br>
+            (주차 가능 대수 및 상세 안내로 교체 필요)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       CTA
+  ══════════════════════════════ -->
+  <section class="cta-section">
+    <div class="container" style="position:relative;z-index:1">
+      <div style="display:grid;gap:2rem;grid-template-columns:1fr;align-items:center" class="loc-cta-grid">
+        <div style="color:#fff">
+          <h2 style="font-size:clamp(1.5rem,4vw,2rem);font-weight:900;margin:0 0 .75rem">방문 전 전화 주세요</h2>
+          <p style="color:rgba(255,255,255,.8);line-height:1.7;margin:0">
+            진료 가능 여부 확인 및 예약을 원하시면<br>아래 번호로 편하게 연락 주세요.
+          </p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.75rem">
+          <a href="tel:03193950737" style="display:flex;align-items:center;justify-content:center;gap:.75rem;background:var(--accent);padding:1.25rem 2rem;color:#fff;font-size:1.25rem;font-weight:900">
+            📞 031-939-5737
+          </a>
+          <p style="text-align:center;font-size:.8125rem;color:rgba(255,255,255,.6);margin:0">평일 09:00~18:00 · 토 09:00~13:00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer-root"></div>
+<a href="tel:03193950737" class="float-call" aria-label="전화">
+  <svg style="width:24px;height:24px" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+</a>
+<script src="assets/js/components.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded',function(){
+    const g = document.querySelector('.loc-cta-grid');
+    function check(){ if(g) g.style.gridTemplateColumns = window.innerWidth>=768?'1fr 1fr':'1fr'; }
+    check(); window.addEventListener('resize',check,{passive:true});
+  });
+</script>
+</body>
+</html>

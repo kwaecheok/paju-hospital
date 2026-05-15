@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>질환소개 | 파주쾌척한방병원</title>
+  <meta name="description" content="파주쾌척한방병원에서 치료하는 주요 질환을 소개합니다. 척추질환, 관절질환, 교통사고 후유증, 안면마비 등 다양한 질환을 전문적으로 다룹니다."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <style>
+    /* 카테고리 탭 */
+    .cat-tabs { display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:3rem; }
+    .cat-tab  { padding:.6rem 1.25rem;border:1px solid var(--border);background:#fff;color:var(--text-muted);font-size:.875rem;font-weight:600;cursor:pointer;transition:all .2s; }
+    .cat-tab.active,.cat-tab:hover { background:var(--primary);color:#fff;border-color:var(--primary); }
+
+    /* 카테고리 섹션 */
+    .cat-section { padding:3rem 0;border-top:1px solid var(--border); }
+    .cat-section:first-of-type { border-top:none; }
+    .cat-header { display:flex;align-items:center;gap:1rem;margin-bottom:2rem; }
+    .cat-badge  { display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:9999px;font-size:1.375rem;flex-shrink:0; }
+    .cat-header h2 { font-size:1.5rem;font-weight:900;color:var(--text);margin:0; }
+    .cat-header p  { font-size:.875rem;color:var(--text-muted);margin:.25rem 0 0; }
+
+    .disease-cards-grid { display:grid;gap:1.25rem;grid-template-columns:1fr; }
+    @media(min-width:640px){ .disease-cards-grid { grid-template-columns:repeat(2,1fr); } }
+    @media(min-width:1024px){ .disease-cards-grid { grid-template-columns:repeat(4,1fr); } }
+
+    /* 질환 상세 카드 */
+    .disease-detail-card { background:#fff;border:1px solid var(--border);padding:1.75rem;transition:transform .3s,box-shadow .3s; }
+    .disease-detail-card:hover { transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.09); }
+    .dd-icon { width:48px;height:48px;border-radius:9999px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;transition:background .3s,color .3s; }
+    .disease-detail-card:hover .dd-icon { background:var(--primary);color:#fff; }
+    .dd-tag  { display:inline-block;font-size:.6875rem;font-weight:700;padding:.2rem .6rem;border-radius:9999px;margin-bottom:.625rem; }
+    .dd-name { font-size:1rem;font-weight:700;color:var(--text);margin-bottom:.375rem; }
+    .dd-symptoms { font-size:.8125rem;color:var(--text-muted);line-height:1.65;margin-bottom:.875rem; }
+    .dd-treat { font-size:.8125rem;color:var(--primary);font-weight:600;display:flex;align-items:center;gap:.25rem;padding-top:.75rem;border-top:1px solid var(--border); }
+    .dd-treat::before { content:'✚';font-size:.6875rem; }
+
+    /* 교통사고 / 입원치료 안내 블록 */
+    .highlight-block { background:var(--primary);color:#fff;padding:2.5rem;margin-top:2rem; }
+    .highlight-block h3 { font-size:1.25rem;font-weight:900;margin:0 0 .75rem; }
+    .highlight-block p  { color:rgba(255,255,255,.85);line-height:1.75;margin:0 0 1.25rem;font-size:.9375rem; }
+    .highlight-list { list-style:none;padding:0;margin:0;display:grid;gap:.5rem; }
+    @media(min-width:640px){ .highlight-list { grid-template-columns:repeat(2,1fr); } }
+    .highlight-list li { display:flex;align-items:center;gap:.5rem;font-size:.875rem;color:rgba(255,255,255,.9); }
+    .highlight-list li::before { content:'✓';color:var(--accent);font-weight:700; }
+  </style>
+</head>
+<body data-page="diseases">
+<div id="header-root"></div>
+
+<div id="sub-hero-root"
+  data-title="질환소개"
+  data-subtitle="통증의 원인을 살피고, 증상에 맞는 치료 방향을 안내합니다."
+  data-breadcrumbs='[["질환소개","diseases.html"]]'>
+</div>
+
+<main>
+  <section class="section-pad" style="background:#fff">
+    <div class="container">
+
+      <!-- 카테고리 탭 -->
+      <div class="cat-tabs">
+        <button class="cat-tab active" onclick="scrollTo('lumbar')">척추질환</button>
+        <button class="cat-tab" onclick="scrollTo('joint')">관절질환</button>
+        <button class="cat-tab" onclick="scrollTo('traffic')">교통사고 후유증</button>
+        <button class="cat-tab" onclick="scrollTo('facial')">안면마비</button>
+        <button class="cat-tab" onclick="scrollTo('inpatient')">입원치료</button>
+      </div>
+
+      <!-- ══ 척추질환 ══ -->
+      <div id="lumbar" class="cat-section">
+        <div class="cat-header">
+          <div class="cat-badge" style="background:#eff6ff;font-size:1.5rem">🦴</div>
+          <div>
+            <h2>척추질환</h2>
+            <p>경추·흉추·요추 전반의 디스크 및 퇴행성 척추 질환을 다룹니다</p>
+          </div>
+        </div>
+        <div class="disease-cards-grid">
+          <div class="disease-detail-card">
+            <div class="dd-icon" style="background:#eff6ff;color:#1d4ed8">
+              <svg viewBox="0 0 48 48" style="width:26px;height:26px" fill="none"><circle cx="24" cy="8" r="5" stroke="currentColor" stroke-width="2.5"/><rect x="20" y="15" width="8" height="6" rx="2" stroke="currentColor" stroke-width="2.5"/><rect x="20" y="23" width="8" height="6" rx="2" stroke="currentColor" stroke-width="2.5"/><rect x="20" y="31" width="8" height="6" rx="2" stroke="currentColor" stroke-width="2.5"/></svg>
+            </div>
+            <span class="dd-tag spine">척추</span>
+            <div class="dd-name">허리디스크</div>
+            <p class="dd-symptoms">허리 통증, 엉덩이 및 다리로 뻗치는 방사통, 오래 앉기 어려움, 재채기 시 통증 악화 등의 증상이 나타날 수 있습니다.</p>
+            <div class="dd-treat">침치료 · 추나요법 · 약침 · 한약</div>
+          </div>
+          <div id="cervical" class="disease-detail-card">
+            <div class="dd-icon" style="background:#eff6ff;color:#1d4ed8">
+              <svg viewBox="0 0 48 48" style="width:26px;height:26px" fill="none"><circle cx="24" cy="10" r="6" stroke="currentColor" stroke-width="2.5"/><rect x="19" y="18" width="10" height="18" rx="2" stroke="currentColor" stroke-width="2.5"/></svg>
+            </div>
+            <span class="dd-tag spine">척추</span>
+            <div class="dd-name">목디스크</div>
+            <p class="dd-symptoms">목 통증, 어깨·팔로 뻗치는 방사통, 손 저림, 두통, 어지럼증 등 경추 신경 압박으로 다양한 증상이 나타납니다.</p>
+            <div class="dd-treat">침치료 · 추나요법 · 봉침 · 한약</div>
+          </div>
+          <div id="stenosis" class="disease-detail-card">
+            <div class="dd-icon" style="background:#eff6ff;color:#1d4ed8">
+              <svg viewBox="0 0 48 48" style="width:26px;height:26px" fill="none"><rect x="16" y="8" width="16" height="8" rx="3" stroke="currentColor" stroke-width="2.5"/><rect x="16" y="20" width="16" height="8" rx="3" stroke="currentColor" stroke-width="2.5"/><rect x="16" y="32" width="16" height="8" rx="3" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="12" r="2" fill="currentColor" opacity=".5"/><circle cx="24" cy="24" r="2" fill="currentColor" opacity=".5"/></svg>
+            </div>
+            <span class="dd-tag spine">척추</span>
+            <div class="dd-name">척추관협착증</div>
+            <p class="dd-symptoms">걸을수록 다리가 저리고 무거워지는 보행 장애, 허리 통증, 앉으면 편해지는 증상이 특징입니다.</p>
+            <div class="dd-treat">침치료 · 한약 · 추나요법</div>
+          </div>
+          <div class="disease-detail-card">
+            <div class="dd-icon" style="background:#eff6ff;color:#1d4ed8">
+              <svg viewBox="0 0 48 48" style="width:26px;height:26px" fill="none"><path d="M16 8 L24 8 L32 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M18 16 L24 8 L30 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 8 L24 40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="dd-tag spine">척추</span>
+            <div class="dd-name">일자목 (거북목)</div>
+            <p class="dd-symptoms">목이 앞으로 빠진 자세, 만성 목·어깨 통증, 두통, 집중력 저하, 장시간 스마트폰·컴퓨터 사용이 원인이 됩니다.</p>
+            <div class="dd-treat">추나요법 · 침치료 · 자세 교정</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ 관절질환 ══ -->
+      <div id="joint" class="cat-section">
+        <div class="cat-header">
+          <div class="cat-badge" style="background:#f0fdf4;font-size:1.5rem">🦵</div>
+          <div>
+            <h2>관절질환</h2>
+            <p>어깨·무릎·손목·발목 등 관절 부위의 통증과 기능 저하를 다룹니다</p>
+          </div>
+        </div>
+        <div class="disease-cards-grid">
+          <div class="disease-detail-card">
+            <div class="dd-icon" style="background:#f0fdf4;color:#15803d">
+              <svg viewBox="0 0 48 48" style="width:26px;height:26px" fill="none"><ellipse cx="24" cy="24" rx="8" ry="6" stroke="currentColor" stroke-width="2.5"/><path d="M20 6L20 20M28 6L28 20M20 28L20 44M28 28L28 44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="dd-tag joint">관절</span>
+            <div class="dd-name">무릎통증</div>
+            <p class="dd-symptoms">퇴행성 관절염, 반월판 손상, 슬개건염 등으로 인한 무릎 통증, 부종, 운동 제한이 나타납니다.</p>
+            <div class="dd-treat">침치료 · 봉침 · 약침 · 한약</div>
+          </div>
+          <div class="disease-detail-card">
+            <div class="dd-icon" style="background:#f0fdf4;color:#15803d">
+              <svg viewBox="0 0 48 48" style="width:26px;height:26px" fill="none"><circle cx="24" cy="16" r="7" stroke="currentColor" stroke-width="2.5"/><path d="M8 16C12 14 18 13 24 16M40 16C36 14 30 13 24 16M24 23L24 42" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="dd-tag joint">관절</span>
+            <div class="dd-name">어깨통증</div>
+            <p class="dd-symptoms">오십견(유착성 관절낭염), 회전근개 파열, 어깨충돌증후군으로 팔 들기 어려움, 야간 통증이 나타납니다.</p>
+            <div class="dd-treat">침치료 · 추나요법 · 약침</div>
+          </div>
+          <div class="disease-detail-card">
+            <div class="dd-icon" style="background:#f0fdf4;color:#15803d">
+              <svg viewBox="0 0 48 48" style="width:26px;height:26px" fill="none"><rect x="16" y="18" width="16" height="12" rx="4" stroke="currentColor" stroke-width="2.5"/><path d="M20 18 L20 12 M28 18 L28 12 M24 30 L24 38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="dd-tag joint">관절</span>
+            <div class="dd-name">손목·손가락 통증</div>
+            <p class="dd-symptoms">손목터널증후군, 방아쇠수지, 드퀘르벵건초염 등 손목·손가락 부위의 통증과 저림, 기능 제한이 나타납니다.</p>
+            <div class="dd-treat">침치료 · 약침 · 한약</div>
+          </div>
+          <div class="disease-detail-card">
+            <div class="dd-icon" style="background:#f0fdf4;color:#15803d">
+              <svg viewBox="0 0 48 48" style="width:26px;height:26px" fill="none"><ellipse cx="24" cy="32" rx="10" ry="6" stroke="currentColor" stroke-width="2.5"/><path d="M14 32 L14 20 M34 32 L34 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M14 20 Q24 12 34 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="dd-tag joint">관절</span>
+            <div class="dd-name">발목·발 통증</div>
+            <p class="dd-symptoms">족저근막염, 발목 인대 손상, 아킬레스건염 등으로 인한 발뒤꿈치·발바닥 통증, 부종이 나타납니다.</p>
+            <div class="dd-treat">침치료 · 봉침 · 추나요법</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ 교통사고 후유증 ══ -->
+      <div id="traffic" class="cat-section">
+        <div class="cat-header">
+          <div class="cat-badge" style="background:#fff7ed;font-size:1.5rem">🚗</div>
+          <div>
+            <h2>교통사고 후유증</h2>
+            <p>사고 후 남은 통증과 불편함을 한방 치료로 체계적으로 관리합니다</p>
+          </div>
+        </div>
+        <div class="disease-cards-grid">
+          <div class="disease-detail-card">
+            <div class="dd-icon" style="background:#fff7ed;color:#c2410c">🦷</div>
+            <span class="dd-tag traffic">교통사고</span>
+            <div class="dd-name">목·허리 통증</div>
+            <p class="dd-symptoms">충격으로 인한 경추·요추 부위 염좌, 근육 긴장, 인대 손상으로 목 돌리기 어렵고 허리가 뻐근한 증상이 지속됩니다.</p>
+            <div class="dd-treat">침치료 · 추나요법 · 한약 · 약침</div>
+          </div>
+          <div class="disease-detail-card">
+            <div class="dd-icon" style="background:#fff7ed;color:#c2410c">🤕</div>
+            <span class="dd-tag traffic">교통사고</span>
+            <div class="dd-name">두통·어지럼</div>
+            <p class="dd-symptoms">사고 후 발생하는 두통, 어지럼증, 이명, 집중력 저하 등 뇌진탕 후유증과 관련된 신경 증상입니다.</p>
+            <div class="dd-treat">침치료 · 한약 · 경혈 자극</div>
+          </div>
+          <div class="disease-detail-card">
+            <div class="dd-icon" style="background:#fff7ed;color:#c2410c">💪</div>
+            <span class="dd-tag traffic">교통사고</span>
+            <div class="dd-name">근육 긴장·멍</div>
+            <p class="dd-symptoms">충격으로 인한 전신 근육 긴장, 타박상, 멍, 혈행 장애로 인한 부종과 통증이 나타납니다.</p>
+            <div class="dd-treat">부항 · 침치료 · 한방 물리치료</div>
+          </div>
+          <div class="disease-detail-card">
+            <div class="dd-icon" style="background:#fff7ed;color:#c2410c">😔</div>
+            <span class="dd-tag traffic">교통사고</span>
+            <div class="dd-name">심리적 불안</div>
+            <p class="dd-symptoms">사고 후 발생하는 불안감, 수면 장애, 피로 등 심리·신체 복합 증상도 한방 치료로 관리합니다.</p>
+            <div class="dd-treat">한약 · 침치료 · 심신 안정</div>
+          </div>
+        </div>
+        <div class="highlight-block">
+          <h3>🚗 자동차보험 적용 안내</h3>
+          <p>교통사고 후유증 치료는 자동차보험이 적용되어 환자 부담 없이 치료받으실 수 있습니다. 보험 처리에 관한 자세한 안내는 전화로 문의해 주세요.</p>
+          <ul class="highlight-list">
+            <li>자동차보험 100% 적용 (본인부담 없음)</li>
+            <li>보험 서류 처리 안내 도움</li>
+            <li>사고 당일~수일 내 내원 권장</li>
+            <li>침치료·추나요법 모두 적용 가능</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ══ 안면마비 ══ -->
+      <div id="facial" class="cat-section">
+        <div class="cat-header">
+          <div class="cat-badge" style="background:#fdf4ff;font-size:1.5rem">😶</div>
+          <div>
+            <h2>안면마비</h2>
+            <p>구안와사 및 안면 신경 마비를 한방 치료로 관리합니다</p>
+          </div>
+        </div>
+        <div class="disease-cards-grid" style="grid-template-columns:1fr">
+        <div style="display:grid;gap:1.25rem;grid-template-columns:1fr" class="facial-inner">
+          <div class="disease-detail-card">
+            <div class="dd-icon" style="background:#fdf4ff;color:#7e22ce">😶</div>
+            <span class="dd-tag facial">안면마비</span>
+            <div class="dd-name">구안와사 (말초성 안면마비)</div>
+            <p class="dd-symptoms">안면 신경 마비로 눈이 잘 감기지 않거나 입이 한쪽으로 돌아가는 증상이 나타납니다. 초기에 적절한 치료를 받는 것이 중요합니다.</p>
+            <div class="dd-treat">침치료 · 전침 · 한약 · 뜸</div>
+          </div>
+          <div class="disease-detail-card">
+            <div class="dd-icon" style="background:#fdf4ff;color:#7e22ce">🫣</div>
+            <span class="dd-tag facial">안면마비</span>
+            <div class="dd-name">안면 비대칭·경련</div>
+            <p class="dd-symptoms">안면 근육의 불균형으로 인한 비대칭, 눈꺼풀 떨림, 안면 경련 등 다양한 안면 신경 관련 증상을 다룹니다.</p>
+            <div class="dd-treat">침치료 · 약침 · 한약</div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- ══ 입원치료 ══ -->
+      <div id="inpatient" class="cat-section">
+        <div class="cat-header">
+          <div class="cat-badge" style="background:#f0fdf4;font-size:1.5rem">🛏️</div>
+          <div>
+            <h2>입원치료 안내</h2>
+            <p>중증 척추·관절 질환자를 위한 집중 한방 입원 치료</p>
+          </div>
+        </div>
+        <div class="highlight-block" style="background:var(--primary-dark)">
+          <h3>입원치료 대상</h3>
+          <p>다음과 같은 경우 입원 치료를 통해 더욱 집중적인 치료를 받으실 수 있습니다.</p>
+          <ul class="highlight-list">
+            <li>중증 허리·목 디스크 환자</li>
+            <li>수술 후 한방 재활이 필요한 경우</li>
+            <li>교통사고 후 집중 치료 필요</li>
+            <li>만성 통증으로 일상생활 지장</li>
+            <li>거동이 불편하여 통원이 어려운 경우</li>
+            <li>빠른 집중 치료가 필요한 급성기 환자</li>
+          </ul>
+          <div style="margin-top:1.5rem">
+            <a href="tel:03193950737" class="btn-accent">📞 031-939-5737 입원 문의</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ CTA ══ -->
+  <section class="cta-section">
+    <div class="container" style="position:relative;z-index:1;text-align:center;color:#fff">
+      <h2 style="font-size:clamp(1.5rem,4vw,2rem);font-weight:900;margin:0 0 1rem">내 증상이 궁금하신가요?</h2>
+      <p style="color:rgba(255,255,255,.8);margin-bottom:2rem;line-height:1.7">전화로 증상을 말씀해 주시면 치료 가능 여부를 안내해 드립니다.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center">
+        <a href="tel:03193950737" class="btn-accent" style="font-size:1rem;padding:1rem 2rem">📞 031-939-5737</a>
+        <a href="doctors.html" class="btn-outline-w">의료진 소개 보기</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer-root"></div>
+<a href="tel:03193950737" class="float-call" aria-label="전화">
+  <svg style="width:24px;height:24px" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+</a>
+<script src="assets/js/components.js"></script>
+<script>
+  /* 반응형 그리드 */
+  function applyFacialGrid(){
+    const el = document.querySelector('.facial-inner');
+    if(el) el.style.gridTemplateColumns = window.innerWidth>=768 ? 'repeat(2,1fr)' : '1fr';
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    applyFacialGrid();
+    window.addEventListener('resize',applyFacialGrid,{passive:true});
+  });
+
+  /* 탭 스크롤 */
+  function scrollTo(id){
+    const el = document.getElementById(id);
+    if(el){ const top = el.getBoundingClientRect().top + window.scrollY - 100; window.scrollTo({top,behavior:'smooth'}); }
+    document.querySelectorAll('.cat-tab').forEach(t=>t.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+</script>
+</body>
+</html>
